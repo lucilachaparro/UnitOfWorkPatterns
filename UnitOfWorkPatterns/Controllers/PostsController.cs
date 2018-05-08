@@ -48,7 +48,7 @@ namespace UnitOfWorkPatterns.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,UserId,Content")] Post post)
+        public async Task<ActionResult> Create([Bind(Include = "Id,User,UserId,Content")] Post post)
         {
             if (ModelState.IsValid)
             {

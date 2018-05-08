@@ -11,12 +11,13 @@ namespace UnitOfWorkPatterns.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        public string UserId { get; set; }
+        [ForeignKey("User")]
+        public int UserId { get; set; }
 
-        public User User { get; set; }
+        public virtual User User { get; set; }
 
         public string Content { get; set; }
     }
